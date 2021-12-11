@@ -1,11 +1,10 @@
 const mult = (operation, numbers) => {
-  // if (operation === "mult") {
-  //   let result = numbers.reduce((acc, el) => acc * el);
-  //   console.log(result);
-  //   return true;
-  // }
-  // return null;
-  console.log("mult");
+  if (operation === "mult") {
+    let result = numbers.reduce((acc, el) => acc * el);
+    console.log(result);
+    return true;
+  }
+  return null;
 };
 
-module.export = mult;
+module.exports = mult;

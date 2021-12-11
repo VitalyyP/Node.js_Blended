@@ -4,4 +4,5 @@
 // console.log(process.argv);
 // Все, что пишем после node server.js попадает в process.argv!
 
-require("./calc");
+// const { calcOOP } = require("./calcOPPstatic");
+require("./calculator_basic");

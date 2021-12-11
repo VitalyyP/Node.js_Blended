@@ -1,10 +1,5 @@
 class Calculator {
-  constructor(operation, numbers) {
-    this.operation = operation;
-    this.numbers = numbers;
-  }
-
-  sum = (operation, numbers) => {
+  static sum = (operation, numbers) => {
     if (operation === "sum") {
       let result = numbers.reduce((acc, el) => acc + el, 0);
       console.log(result);
@@ -13,7 +8,7 @@ class Calculator {
     return null;
   };
 
-  sub = (operation, numbers) => {
+  static sub = (operation, numbers) => {
     if (operation === "sub") {
       let result = numbers.reduce((acc, el) => acc - el);
       console.log(result);
@@ -22,7 +17,7 @@ class Calculator {
     return null;
   };
 
-  mult = (operation, numbers) => {
+  static mult = (operation, numbers) => {
     if (operation === "mult") {
       let result = numbers.reduce((acc, el) => acc * el);
       console.log(result);
@@ -31,7 +26,7 @@ class Calculator {
     return null;
   };
 
-  div = (operation, numbers) => {
+  static div = (operation, numbers) => {
     if (operation === "div") {
       let result = numbers.reduce((acc, el) => acc / el);
       console.log(result);
@@ -40,7 +35,7 @@ class Calculator {
     return null;
   };
 
-  actionHandler = (operation, numbers) => {
+  static actionHandler = (operation, numbers) => {
     switch (operation) {
       case "sum":
         this.sum(operation, numbers);
@@ -59,11 +54,11 @@ class Calculator {
     }
   };
 
-  unit = () => {
-    this.actionHandler(this.operation, this.numbers);
+  static init = (operation, numbers) => {
+    this.actionHandler(operation, numbers);
   };
 }
 const [operation, ...stringNumbers] = process.argv.slice(2);
 const numbers = stringNumbers.map((el) => Number(el));
 
-module.exports = new Calculator(operation, numbers);
+module.exports = Calculator.init(operation, numbers);

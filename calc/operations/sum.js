@@ -1,11 +1,10 @@
 const sum = (operation, numbers) => {
-  // if (operation === "sum") {
-  //   let result = numbers.reduce((acc, el) => acc + el, 0);
-  //   console.log(result);
-  //   return true;
-  // }
-  // return null;
-  console.log("sum");
+  if (operation === "sum") {
+    let result = numbers.reduce((acc, el) => acc + el, 0);
+    console.log(result);
+    return true;
+  }
+  return null;
 };
 
-module.export = sum;
+module.exports = sum;

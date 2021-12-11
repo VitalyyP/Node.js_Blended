@@ -1,11 +1,10 @@
 const div = (operation, numbers) => {
-  // if (operation === "div") {
-  //   let result = numbers.reduce((acc, el) => acc / el);
-  //   console.log(result);
-  //   return true;
-  // }
-  // return null;
-  console.log("div");
+  if (operation === "div") {
+    let result = numbers.reduce((acc, el) => acc / el);
+    console.log(result);
+    return true;
+  }
+  return null;
 };
 
-module.export = div;
+module.exports = div;
